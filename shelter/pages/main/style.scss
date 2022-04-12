@@ -1,0 +1,228 @@
+$background-color: #211F20;
+$background-images: "../../assets/images/noise_lines_transparent@2X.png";
+$radial-background-color: #5B483A;
+$button-primary-color: #F1CDB3;
+$button-primary-light: #FDDCC4;
+$color-light: #FFFFFF;
+$color-light-s: #FAFAFA;
+$color-menu-normal:#CDCDCD;
+$color-dark-3xl:#292929;
+$color-dark-xl:#4C4C4C;
+$color-dark-l:#545454;
+
+$color-dark-s:#CDCDCD;
+
+@mixin buttons($button-background,$primary-color,$hover-color) {
+    button{
+        color: $color-dark-3xl;
+        padding: 13px 0px;
+        border: 2px solid $primary-color;
+        box-sizing: border-box;
+        border-radius: 100px;
+        background: $button-background;
+        width: 207px;
+        font-family: 'Georgia';
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 130%;
+        /* identical to box height, or 22px */
+
+letter-spacing: 0.06em;
+
+    }
+    button:hover{
+        border: 2px solid $hover-color;
+        background: $hover-color;
+    }
+}
+ @mixin font-logo-subscription() {
+     font-family: 'Arial';
+     font-size: 13px;
+     letter-spacing: 0.1em;
+     color: $color-light;
+ }   
+ @mixin font-logo() {
+    font-family: 'Georgia';
+    font-weight: lighter;
+    font-size: 31px;
+    letter-spacing: 0.06em;
+ }   
+ @mixin font-menu {
+    /* paragraph-l */
+    font-family: 'Arial';
+    font-size: 15px;
+    padding: 5px 0px;
+    /* identical to box height, or 24px */
+    /* color-light-s */
+    color: $color-menu-normal;
+ }
+ @mixin font-h2 {
+    /* font-h2 */
+    font-family: 'Georgia';
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 130%;
+    /* or 57px */
+    align-items: center;
+    /* color-light-xl */
+    color: $color-light;
+ }
+ @mixin paragraph-l {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    /* or 24px */
+    align-items: center;
+    color: $color-dark-s;
+ }
+    
+
+body{
+    display:flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    // justify-content: ;
+    height: 120px;
+    width: 100%;
+    a{
+        @include font-menu;
+        margin-left: 35px;
+    }
+    a:link, a:visited {
+        text-decoration: none;
+    }
+    a:hover{
+        color:$color-light-s
+    }
+    a:focus{
+        border-bottom: solid 3px $button-primary-color;
+        position: relative;
+        top: 2px;
+    }
+    
+    .first-menu-item{
+        align-self: center;
+        position: relative;
+        top: 2px;
+        border-bottom: solid 3px $button-primary-color;
+    }
+    .logo{
+        display: block;
+        position: absolute;
+        height: 60px;
+        top: 60px - 32px;
+        left: 0%;
+        a{
+            margin:0px 0px 0px 0px;
+            padding: 0%;
+            h1{
+                margin: 0px 0px 10px 0px;
+                text-align: justify;
+                padding: 0%;
+                position: relative;
+                color: $button-primary-color;
+                @include font-logo;
+            }
+        }
+        p{
+            display: block;
+            text-align: justify;
+            margin:0%;
+
+            padding:0%;
+        }
+        #logo-subscription{
+            position: relative;
+            @include font-logo-subscription;
+        }
+        a:link, a:visited {
+            text-decoration: none;
+        }
+    }   
+}
+.background-top {
+    min-width: fit-content;
+    // min-height: 908px;
+    background:url($background-images), radial-gradient(100% 215% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
+}
+.wrapper{
+    width: fit-content;
+    padding: 0px 40px;
+    // width: 1200px;
+    height: fit-content;
+    margin: 0px auto;
+    .about-the-shelter{
+        display: flex;
+        justify-content: space-between;
+        .not-only-people{
+            align-self: center;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 460px;
+            height: 332px;
+            .Heading2{
+                display: block;
+                width: 310px;
+                height: 114px;
+                @include font-h2;
+                margin: 0%;
+            }
+            p{
+                @include paragraph-l();
+                text-align: justify;
+                margin: 0px 0px 0px 0px;
+            }    
+            @include buttons($button-primary-color, $button-primary-light, $button-primary-light);
+        }
+        .start-screen-puppy{
+            padding: 60px 0px 0px 0px;
+        }
+    }
+}
+#about{
+    width: 100%;
+    height: 588px;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    background: white;
+    img{
+        width: 300px;
+        margin-right: 120px;
+        height: 408px;
+        align-self: center;
+
+    }
+    div{
+        align-self: center;
+        width: 380px;
+        h3{
+            font-family: 'Georgia';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 35px;
+            line-height: 130%;
+            color: $color-dark-l;
+        }
+        p{
+            font-family: 'Arial';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 160%;
+            color:$color-dark-xl;
+        }
+    }
+
+}

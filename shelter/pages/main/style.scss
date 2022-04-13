@@ -5,29 +5,29 @@ $button-primary-color: #F1CDB3;
 $button-primary-light: #FDDCC4;
 $color-light: #FFFFFF;
 $color-light-s: #FAFAFA;
+$color-light-l: #F6F6F6;
 $color-menu-normal:#CDCDCD;
 $color-dark-3xl:#292929;
 $color-dark-xl:#4C4C4C;
 $color-dark-l:#545454;
-
 $color-dark-s:#CDCDCD;
+$card-background: #FAFAFA;
 
-@mixin buttons($button-background,$primary-color,$hover-color) {
+@mixin buttons($button-background,$primary-color,$hover-color,$button-width : 207px){
     button{
         color: $color-dark-3xl;
         padding: 13px 0px;
-        border: 2px solid $primary-color;
+        border: 2px solid $button-primary-color;
         box-sizing: border-box;
         border-radius: 100px;
+        width: $button-width;
         background: $button-background;
-        width: 207px;
         font-family: 'Georgia';
         font-weight: 400;
         font-size: 17px;
         line-height: 130%;
         /* identical to box height, or 22px */
-
-letter-spacing: 0.06em;
+        letter-spacing: 0.06em;
 
     }
     button:hover{
@@ -35,26 +35,42 @@ letter-spacing: 0.06em;
         background: $hover-color;
     }
 }
+@mixin button-arrow(){
+        color: $color-dark-3xl;
+        border: 2px solid $button-primary-color;
+        
+        border-radius: 100px;
+        height: 52px;
+        width: 52px;
+        font-size: 0px;
+        background: white;
+        font-family: 'Georgia';
+        line-height: 130%;
+        &:hover{
+            border: 2px solid $button-primary-light;
+            background: $button-primary-light;
+        }
+    }
+
+    
  @mixin font-logo-subscription() {
      font-family: 'Arial';
      font-size: 13px;
-     letter-spacing: 0.1em;
+     letter-spacing: 0.12em;
      color: $color-light;
  }   
  @mixin font-logo() {
     font-family: 'Georgia';
     font-weight: lighter;
     font-size: 31px;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
  }   
  @mixin font-menu {
-    /* paragraph-l */
     font-family: 'Arial';
     font-size: 15px;
     padding: 5px 0px;
-    /* identical to box height, or 24px */
-    /* color-light-s */
     color: $color-menu-normal;
+    // letter-spacing: 0.02em;
  }
  @mixin font-h2 {
     /* font-h2 */
@@ -83,17 +99,55 @@ body{
     flex-direction: column;
     margin: 0;
 }
+.background-top {
+    min-width: 100%;
+    margin: 0px auto;
+    // min-height: 908px;
+    background:url($background-images), radial-gradient(100% 215% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
+}
+.logo{
+    display: block;
+    position: absolute;
+    margin-top: 0%;
+    height: 60px;
+    top: 60px ;
+    left: 0%;
+    a{
+        margin:0px 0px 0px 0px;
+        padding: 0%;
+        h1{
+            margin: 0px 0px 10px 0px;
+            text-align: justify;
+            padding: 0%;
+            position: relative;
+            color: $button-primary-color;
+            @include font-logo;
+        }
+    }
+    p{
+        display: block;
+        text-align: justify;
+        margin:0%;
 
-
-
+        padding:0%;
+    }
+    #logo-subscription{
+        position: relative;
+        @include font-logo-subscription;
+    }
+    a:link, a:visited {
+        text-decoration: none;
+    }
+}   
 header{
     position: relative;
+    top: 56px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    // justify-content: ;
-    height: 120px;
+    height: 60px;
     width: 100%;
+
     a{
         @include font-menu;
         margin-left: 35px;
@@ -116,61 +170,28 @@ header{
         top: 2px;
         border-bottom: solid 3px $button-primary-color;
     }
-    .logo{
-        display: block;
-        position: absolute;
-        height: 60px;
-        top: 60px - 32px;
-        left: 0%;
-        a{
-            margin:0px 0px 0px 0px;
-            padding: 0%;
-            h1{
-                margin: 0px 0px 10px 0px;
-                text-align: justify;
-                padding: 0%;
-                position: relative;
-                color: $button-primary-color;
-                @include font-logo;
-            }
-        }
-        p{
-            display: block;
-            text-align: justify;
-            margin:0%;
+}
 
-            padding:0%;
-        }
-        #logo-subscription{
-            position: relative;
-            @include font-logo-subscription;
-        }
-        a:link, a:visited {
-            text-decoration: none;
-        }
-    }   
-}
-.background-top {
-    min-width: fit-content;
-    // min-height: 908px;
-    background:url($background-images), radial-gradient(100% 215% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
-}
 .wrapper{
-    width: fit-content;
-    padding: 0px 40px;
-    // width: 1200px;
-    height: fit-content;
-    margin: 0px auto;
+    position: relative;
+    margin: 0px 40px;
+    max-width: 1360px;
+    height: 908px;
+    
     .about-the-shelter{
         display: flex;
+        position: relative;
+        top:120px;
         justify-content: space-between;
         .not-only-people{
             align-self: center;
             display: flex;
+            position: relative;
+            bottom: 40px;
             justify-content: space-between;
             flex-direction: column;
+            height: 320px;
             width: 460px;
-            height: 332px;
             .Heading2{
                 display: block;
                 width: 310px;
@@ -186,42 +207,179 @@ header{
             @include buttons($button-primary-color, $button-primary-light, $button-primary-light);
         }
         .start-screen-puppy{
-            padding: 60px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
         }
     }
 }
 #about{
     width: 100%;
     height: 588px;
-    display: flex;
-    justify-content: center;
-    align-content: flex-end;
-    background: white;
-    img{
-        width: 300px;
-        margin-right: 120px;
-        height: 408px;
-        align-self: center;
-
-    }
-    div{
-        align-self: center;
-        width: 380px;
-        h3{
-            font-family: 'Georgia';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 35px;
-            line-height: 130%;
-            color: $color-dark-l;
+    .about-wrapper{
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        background: white;
+        gap: 120px;
+        margin: 80px 0px 100px 0px;
+        img{
+            align-self: center;
+            margin-left: 215px;
+            height: 408px;
+            width: 300px;
         }
-        p{
-            font-family: 'Arial';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 160%;
-            color:$color-dark-xl;
+        div{
+            align-self: center;
+            width: 430px;
+            height: 380px;
+            h3{
+                font-family: 'Georgia';
+                font-style: normal;
+                font-weight: 400;
+                margin: 0%;
+                font-size: 35px;
+                line-height: 130%;
+                color: $color-dark-l;
+                letter-spacing: 0.06em;
+            }
+            p{
+                font-family: 'Arial';
+                font-weight: 400;
+                text-align: left;
+                margin:  22px 0px;
+                font-size: 15px;
+                line-height: 165%;
+                color:$color-dark-xl;
+            }
+        }
+    }
+    
+}
+.our-friends-wrapper{
+    min-width: fit-content;
+    background: $color-light-l;
+    .our-friends{
+        margin: 0px 0px;
+        max-width: 1280px;
+        display: block;
+        height: 877px;
+        .slider-wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 697px;
+            h3{
+                font-family: 'Georgia';
+                font-weight: 400;
+                text-align: center;
+                margin: 80px 0px 60px;
+                font-size: 35px;
+                line-height: 130%;
+                color: $color-dark-l;
+                letter-spacing: 0.06em; 
+            }
+            .our-friends-slider{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 90px;
+                align-content: center;
+                .button-arrow-left{
+                    align-self: center;
+                    position: relative;
+                    left: 40px;
+                    justify-self: start;
+                    @include button-arrow();
+                    box-shadow: 0 4px 4px 0 white, 0 3px 5px 0 gray;
+                }
+                div{
+                    margin: 0%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap:10px;
+                    width: 270px;
+                    height: 435px;
+                    p{
+                        font-family: 'Georgia';
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 23px;
+                        letter-spacing: 0.07em;
+                        color:$color-dark-l;
+                    }
+                    &:hover{
+                        background: $card-background;
+                        button{
+                            background: $button-primary-light;
+                        }
+                    }
+                    @include buttons(white, white,$button-primary-light,187px)
+                    
+                }
+                
+                
+                .button-arrow-right{
+                    align-self: center;
+                    position: relative;
+                    right: 40px;
+                    align-self: center;
+                    @include button-arrow();
+                    img{
+                        transform: rotate(180deg);
+                    }
+                    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+                    box-shadow: 0 4px 4px 0 white, 0 3px 5px 0 gray;
+                }
+            }
+            & > button{
+                margin:60px;
+            }
+            @include buttons(white, white,$button-primary-light,261px)
+        }
+    }
+}
+#helping-wrapper{
+    
+    h3{
+        font-family: 'Georgia';
+        font-weight: 400;
+        text-align: center;
+        margin: 80px 0px 60px;
+        font-size: 35px;
+        line-height: 130%;
+        color: $color-dark-l;
+        letter-spacing: 0.06em; 
+    }
+    .helping-window{
+        box-sizing: border-box;
+        width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 40px;
+        padding-right: 40px;
+        display: flex;
+        flex-direction: column;
+        .helping-methods{
+            padding: 0px 87px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            gap: 55px 119px;
+            .methods{
+                display: block;
+                height: 113px;
+                text-align: center;
+                p{
+                    font-family: 'Georgia';
+                    margin: 25px 0 0 0 ;
+                    font-size: 20px;
+                    letter-spacing: 0.06em;
+                    color:$color-dark-l
+                }
+            }
         }
     }
 

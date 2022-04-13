@@ -4,6 +4,7 @@ $radial-background-color: #5B483A;
 $button-primary-color: #F1CDB3;
 $button-primary-light: #FDDCC4;
 $color-light: #FFFFFF;
+
 $color-light-s: #FAFAFA;
 $color-light-l: #F6F6F6;
 $color-menu-normal:#CDCDCD;
@@ -12,6 +13,7 @@ $color-dark-xl:#4C4C4C;
 $color-dark-l:#545454;
 $color-dark-s:#CDCDCD;
 $card-background: #FAFAFA;
+$color-dark-m:#B2B2B2;
 
 @mixin buttons($button-background,$primary-color,$hover-color,$button-width : 207px){
     button{
@@ -56,7 +58,7 @@ $card-background: #FAFAFA;
  @mixin font-logo-subscription() {
      font-family: 'Arial';
      font-size: 13px;
-     letter-spacing: 0.12em;
+     letter-spacing: 0.115em;
      color: $color-light;
  }   
  @mixin font-logo() {
@@ -70,7 +72,7 @@ $card-background: #FAFAFA;
     font-size: 15px;
     padding: 5px 0px;
     color: $color-menu-normal;
-    // letter-spacing: 0.02em;
+    letter-spacing: 0.005em;
  }
  @mixin font-h2 {
     /* font-h2 */
@@ -92,65 +94,72 @@ $card-background: #FAFAFA;
     align-items: center;
     color: $color-dark-s;
  }
-    
-
-body{
-    display:flex;
-    flex-direction: column;
-    margin: 0;
+ 
+ 
+ body{
+    //  display: flex;
+     flex-direction: column;
+     align-content: center;
+     margin: 0;
 }
 .background-top {
-    min-width: 100%;
+
+    min-width: fit-content;
     margin: 0px auto;
-    // min-height: 908px;
     background:url($background-images), radial-gradient(100% 215% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
+    background-position: center;
+    // background-size: cover;
+    // background-repeat: repeat-y;
+}
+.wrapper{
+    position: relative;
+    margin: 0px 40px;
+    max-width: 1360px;
+    height: 908px;
+}
+
+.navigation{
+    display: flex;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    // align-content: center;
+}
+.header-conteiner{
+    padding-top: 60px;
+
 }
 .logo{
-    display: block;
-    position: absolute;
-    margin-top: 0%;
-    height: 60px;
-    top: 60px ;
-    left: 0%;
-    a{
-        margin:0px 0px 0px 0px;
-        padding: 0%;
+    display: flex;
+    flex-direction: column;
         h1{
             margin: 0px 0px 10px 0px;
             text-align: justify;
             padding: 0%;
-            position: relative;
+            // position: relative;
             color: $button-primary-color;
             @include font-logo;
         }
-    }
     p{
-        display: block;
         text-align: justify;
         margin:0%;
-
         padding:0%;
     }
     #logo-subscription{
-        position: relative;
         @include font-logo-subscription;
     }
     a:link, a:visited {
         text-decoration: none;
     }
 }   
-header{
-    position: relative;
-    top: 56px;
+.navigation-list{
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 8px;
+    gap: 35px;
     align-items: center;
-    height: 60px;
-    width: 100%;
-
     a{
         @include font-menu;
-        margin-left: 35px;
     }
     a:link, a:visited {
         text-decoration: none;
@@ -161,59 +170,47 @@ header{
     a:focus{
         border-bottom: solid 3px $button-primary-color;
         position: relative;
-        top: 2px;
+        // top: 2px;
     }
-    
     .first-menu-item{
-        align-self: center;
         position: relative;
         top: 2px;
         border-bottom: solid 3px $button-primary-color;
     }
 }
-
-.wrapper{
-    position: relative;
-    margin: 0px 40px;
-    max-width: 1360px;
-    height: 908px;
-    
-    .about-the-shelter{
+.about-the-shelter{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    .not-only-people{
+        align-self: center;
         display: flex;
         position: relative;
-        top:120px;
+        bottom: 40px;
         justify-content: space-between;
-        .not-only-people{
-            align-self: center;
-            display: flex;
-            position: relative;
-            bottom: 40px;
-            justify-content: space-between;
-            flex-direction: column;
-            height: 320px;
-            width: 460px;
-            .Heading2{
-                display: block;
-                width: 310px;
-                height: 114px;
-                @include font-h2;
-                margin: 0%;
-            }
-            p{
-                @include paragraph-l();
-                text-align: justify;
-                margin: 0px 0px 0px 0px;
-            }    
-            @include buttons($button-primary-color, $button-primary-light, $button-primary-light);
+        flex-direction: column;
+        height: 320px;
+        width: 460px;
+        .Heading2{
+            display: block;
+            width: 310px;
+            height: 114px;
+            @include font-h2;
+            margin: 0%;
         }
-        .start-screen-puppy{
-            padding: 0px 0px 0px 0px;
-        }
+        p{
+            @include paragraph-l();
+            text-align: justify;
+            margin: 0px 0px 0px 0px;
+        }    
+        @include buttons($button-primary-color, $button-primary-light, $button-primary-light);
+    }
+    .start-screen-puppy{
+        padding: 0px 0px 0px 0px;
     }
 }
-#about{
-    width: 100%;
-    height: 588px;
+.about{
+    // width: 100%;
     .about-wrapper{
         display: flex;
         justify-content: flex-start;
@@ -225,12 +222,13 @@ header{
             align-self: center;
             margin-left: 215px;
             height: 408px;
-            width: 300px;
+            // width: 300px;
         }
         div{
             align-self: center;
             width: 430px;
             height: 380px;
+            overflow: hidden;
             h3{
                 font-family: 'Georgia';
                 font-style: normal;
@@ -340,7 +338,8 @@ header{
         }
     }
 }
-#helping-wrapper{
+.helping-wrapper{
+    padding-bottom: 7.7%;
     
     h3{
         font-family: 'Georgia';
@@ -383,4 +382,153 @@ header{
         }
     }
 
+}
+.donation{
+    background: $color-light-l;
+    min-width: fit-content;
+    padding-top: 80px;
+    padding-bottom: 88px;
+}
+.donation-conteiner{
+        width: 1280px;
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+        gap:2.3%;
+}
+.credit-card{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    text-align: left;
+
+    h3{
+        font-family: 'Georgia';
+        margin: 0;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 130%;
+        color: $color-dark-l;
+        letter-spacing: 0.06em; 
+    }
+    h5{
+        margin-top:20px;
+        margin-bottom:19px;
+        font-weight: 100;
+        font-family: 'Georgia';
+        font-size: 15px;
+        letter-spacing: 0.07em;
+        color: $color-dark-l;
+    }
+    .href{
+        box-sizing: border-box;
+        width: 349px;
+        margin-bottom: 9px;
+        // height: 43px;   
+        padding: 10px 15px 10px 0;
+        border-radius: 9px;
+        background: url(../../assets/icons/credit-card.svg)  no-repeat;
+        background-color: $button-primary-color;
+        background-position: 15px;
+        text-align: right;
+        font-family: 'Georgia';
+        font-size: 20px;
+        letter-spacing: 0.06em;
+        color:$color-dark-l;
+        &:hover{
+            background-color:$button-primary-light ;
+            border-color: $button-primary-light ;
+        }
+        a,a:hover,a:visited{
+            text-decoration: none;
+            color: $color-dark-l;
+        }
+
+    }
+    p{
+        font-family: 'Arial';
+        font-style: italic;
+        font-size: 12px;
+        line-height: 18px;
+        color: $color-dark-m;
+    }
+}
+footer{
+    // min-width: fit-content;
+    // display: flex;
+    // justify-self: unset;
+    margin: 0px auto;
+    background:url($background-images), radial-gradient(100% 215% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
+}
+.footer-conteiner{
+    max-width: 1280px;
+    padding: 0 40px;
+}
+.flex-conteiner{
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    div{
+        display: flex;
+        justify-self: flex-start;
+        flex-direction: column;
+        gap:40px;
+
+    }
+    .footer-block-1{
+        // height: 234px;
+        width: 278px;
+    }
+    .footer-block-2{
+        a{
+            padding-left: 40px;
+        }
+        padding-left: 0px;
+        // height: 234px;
+        width: 302px;
+    }
+    h3{
+        margin: 0%;
+        margin-top: 16px;
+        padding: 0;
+        font-family: 'Georgia';
+        font-size: 35px;
+        font-weight: lighter;
+        line-height: 130%;
+        letter-spacing: 0.056em;
+        color: $color-light;
+    }
+    a{
+        margin: 0;
+        display: flex;
+        padding-left: 60px;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        gap: 40px;
+        height: 32px;
+        font-family: "Georgia", serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;;
+        color: #F1CDB3;
+        &,&:hover,&:visited{
+        text-decoration: none;
+        }
+    }
+    
+}
+#mail{
+    background: url(../../assets/icons/icon-email.svg) no-repeat;
+}
+#tel{
+    background: url(../../assets/icons/icon-phone.svg) no-repeat;
+}
+#geo-base-1{
+    background: url(../../assets/icons/icon-marker.svg) no-repeat;
+}
+#geo-base-2{
+    background: url(../../assets/icons/icon-marker.svg) no-repeat;
 }

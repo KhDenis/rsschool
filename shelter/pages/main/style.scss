@@ -111,9 +111,11 @@ $color-dark-m:#B2B2B2;
     // background-repeat: repeat-y;
 }
 .wrapper{
+    box-sizing: border-box;
     margin: 0px auto;
     position: relative;
-    max-width: 1360px;
+    max-width: 1280px;
+    padding: 0 40px;
     height: 908px;
 }
 
@@ -179,7 +181,6 @@ $color-dark-m:#B2B2B2;
     }
 }
 .about-the-shelter{
-    
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
@@ -213,19 +214,16 @@ $color-dark-m:#B2B2B2;
 .about{
     .about-wrapper{
         max-width: 1280px;
-        margin: 0px auto;
         display: flex;
-        justify-content: flex-start;
-        align-content: center;
         background: white;
         gap: 120px;
         margin: 0 auto;
-        //  80px 0px 100px 0px;
+        margin-top: 80px;
+        margin-bottom: 100px;
         img{
             align-self: center;
             margin-left: 215px;
             height: 408px;
-            // width: 300px;
         }
         div{
             align-self: center;
@@ -253,7 +251,6 @@ $color-dark-m:#B2B2B2;
             }
         }
     }
-    
 }
 .our-friends-wrapper{
     min-width: fit-content;
@@ -389,8 +386,8 @@ $color-dark-m:#B2B2B2;
 .donation{
     background: $color-light-l;
     min-width: fit-content;
-    padding-top: 80px;
-    padding-bottom: 88px;
+    padding-top: 35px;
+    padding-bottom: 91px;
 }
 .donation-conteiner{
         margin: 0px auto;   
@@ -458,13 +455,10 @@ $color-dark-m:#B2B2B2;
     }
 }
 footer{
-    // min-width: fit-content;
-    // display: flex;
-    // justify-self: unset;
-    margin: 0px auto;
     background:url($background-images), radial-gradient(100% 215% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
 }
 .footer-conteiner{
+    box-sizing: border-box;
     margin: 0px auto;
     max-width: 1280px;
     padding: 0 40px;

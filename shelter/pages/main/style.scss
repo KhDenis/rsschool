@@ -4,7 +4,6 @@ $radial-background-color: #5B483A;
 $button-primary-color: #F1CDB3;
 $button-primary-light: #FDDCC4;
 $color-light: #FFFFFF;
-
 $color-light-s: #FAFAFA;
 $color-light-l: #F6F6F6;
 $color-menu-normal:#CDCDCD;
@@ -33,6 +32,7 @@ $color-dark-m:#B2B2B2;
 
     }
     button:hover{
+        transition: 0.5s;
         border: 2px solid $hover-color;
         background: $hover-color;
     }
@@ -49,12 +49,11 @@ $color-dark-m:#B2B2B2;
         font-family: 'Georgia';
         line-height: 130%;
         &:hover{
+            transition: 0.5s;
             border: 2px solid $button-primary-light;
             background: $button-primary-light;
         }
     }
-
-    
  @mixin font-logo-subscription() {
      font-family: 'Arial';
      font-size: 13px;
@@ -94,13 +93,20 @@ $color-dark-m:#B2B2B2;
     align-items: center;
     color: $color-dark-s;
  }
- 
- 
+ *{
+     margin:0;
+     box-sizing: border-box;
+     
+ }
+ html{
+    scroll-behavior: smooth;
+ }
  body{
-    //  display: flex;
+     display: flex;
      flex-direction: column;
      align-content: center;
      margin: 0;
+     padding: 0%;
 }
 .background-top {
 
@@ -118,7 +124,6 @@ $color-dark-m:#B2B2B2;
     padding: 0 40px;
     height: 908px;
 }
-
 .navigation{
     margin: 0px auto;
     display: flex;
@@ -253,24 +258,25 @@ $color-dark-m:#B2B2B2;
     }
 }
 .our-friends-wrapper{
-    min-width: fit-content;
     background: $color-light-l;
     .our-friends{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        gap:80;
         margin: 0px auto;
         max-width: 1280px;
-        display: block;
-        height: 877px;
         .slider-wrapper{
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
-            height: 697px;
+            gap: 57px;
+            margin-top: 82px;
+            margin-bottom: 100px;
             h3{
                 font-family: 'Georgia';
                 font-weight: 400;
                 text-align: center;
-                margin: 80px 0px 60px;
                 font-size: 35px;
                 line-height: 130%;
                 color: $color-dark-l;
@@ -290,15 +296,12 @@ $color-dark-m:#B2B2B2;
                     @include button-arrow();
                     box-shadow: 0 4px 4px 0 white, 0 3px 5px 0 gray;
                 }
-                div{
-                    margin: 0%;
+                .pets-cards{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    justify-content: flex-start;
-                    gap:10px;
-                    width: 270px;
-                    height: 435px;
+                    gap: 30px;
+                    margin-bottom: 30px;
                     p{
                         font-family: 'Georgia';
                         font-weight: 400;
@@ -308,16 +311,16 @@ $color-dark-m:#B2B2B2;
                         color:$color-dark-l;
                     }
                     &:hover{
-                        background: $card-background;
+                        transition: 0.5s;
+                        background:$color-light;
                         button{
+                            transition: 0.5s;
                             background: $button-primary-light;
                         }
                     }
                     @include buttons(white, white,$button-primary-light,187px)
                     
                 }
-                
-                
                 .button-arrow-right{
                     align-self: center;
                     position: relative;
@@ -334,32 +337,33 @@ $color-dark-m:#B2B2B2;
             & > button{
                 margin:60px;
             }
+
+        }
+        a{
+            // display: block;
+            // margin-top: 60px;   
             @include buttons(white, white,$button-primary-light,261px)
         }
     }
 }
 .helping-wrapper{
-    padding-bottom: 141px;
-    
+
     h3{
-        font-family: 'Georgia';
-        font-weight: 400;
+        font-family: "Georgia";
         text-align: center;
-        margin: 80px 0px 60px;
+        /* margin: 80px 0px 60px; */
         font-size: 35px;
         line-height: 130%;
-        color: $color-dark-l;
-        letter-spacing: 0.06em; 
+        color: rgb(84 84 84);
     }
     .helping-window{
         box-sizing: border-box;
-        width: 1280px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 40px;
-        padding-right: 40px;
+        max-width: 1280px;
+        margin: 80px auto 147px auto;
+        padding: 0 40px;
         display: flex;
         flex-direction: column;
+        gap: 60px;
         .helping-methods{
             padding: 0px 87px;
             display: flex;
@@ -372,11 +376,11 @@ $color-dark-m:#B2B2B2;
                 height: 113px;
                 text-align: center;
                 p{
-                    font-family: 'Georgia';
-                    margin: 25px 0 0 0 ;
+                    font-family: "Georgia";
+                    margin: 21px 0 0 0;
                     font-size: 20px;
                     letter-spacing: 0.06em;
-                    color:$color-dark-l
+                    color: rgb(84 84 84);
                 }
             }
         }
@@ -385,27 +389,24 @@ $color-dark-m:#B2B2B2;
 }
 .donation{
     background: $color-light-l;
-    min-width: fit-content;
-    padding-top: 35px;
-    padding-bottom: 91px;
+    margin: 0 auto;
 }
 .donation-conteiner{
-        margin: 0px auto;   
-        width: 1280px;
-        display: flex;
-        justify-content: center;
-        align-items: center ;
-        gap:2.3%;
+    margin: 30px auto 100px auto;
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 .credit-card{
     display: flex;
     flex-direction: column;
     width: 380px;
-    text-align: left;
+    gap: 19px;
 
     h3{
         font-family: 'Georgia';
-        margin: 0;
         font-weight: 400;
         font-size: 35px;
         line-height: 130%;
@@ -413,29 +414,24 @@ $color-dark-m:#B2B2B2;
         letter-spacing: 0.06em; 
     }
     h5{
-        margin-top:20px;
-        margin-bottom:19px;
         font-weight: 100;
         font-family: 'Georgia';
         font-size: 15px;
-        letter-spacing: 0.07em;
+        letter-spacing: 0.06em;
         color: $color-dark-l;
     }
     .href{
-        box-sizing: border-box;
         width: 349px;
-        margin-bottom: 9px;
-        // height: 43px;   
         padding: 10px 15px 10px 0;
         border-radius: 9px;
         background: url(../../assets/icons/credit-card.svg)  no-repeat;
-        background-color: $button-primary-color;
         background-position: 15px;
         text-align: right;
         font-family: 'Georgia';
         font-size: 20px;
         letter-spacing: 0.06em;
         color:$color-dark-l;
+        background-color: $button-primary-color;
         &:hover{
             background-color:$button-primary-light ;
             border-color: $button-primary-light ;

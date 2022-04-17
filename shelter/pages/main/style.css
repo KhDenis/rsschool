@@ -1,7 +1,18 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  display: flex;
   flex-direction: column;
   align-content: center;
   margin: 0;
+  padding: 0%;
 }
 
 .background-top {
@@ -147,6 +158,7 @@ body {
   letter-spacing: 0.06em;
 }
 .about-the-shelter .not-only-people button:hover {
+  transition: 0.5s;
   border: 2px solid #FDDCC4;
   background: #FDDCC4;
 }
@@ -195,27 +207,28 @@ body {
 }
 
 .our-friends-wrapper {
-  min-width: fit-content;
   background: #F6F6F6;
 }
 .our-friends-wrapper .our-friends {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 80;
   margin: 0px auto;
   max-width: 1280px;
-  display: block;
-  height: 877px;
 }
 .our-friends-wrapper .our-friends .slider-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  height: 697px;
+  gap: 57px;
+  margin-top: 82px;
+  margin-bottom: 100px;
 }
 .our-friends-wrapper .our-friends .slider-wrapper h3 {
   font-family: "Georgia";
   font-weight: 400;
   text-align: center;
-  margin: 80px 0px 60px;
   font-size: 35px;
   line-height: 130%;
   color: #545454;
@@ -245,20 +258,18 @@ body {
   box-shadow: 0 4px 4px 0 white, 0 3px 5px 0 gray;
 }
 .our-friends-wrapper .our-friends .slider-wrapper .our-friends-slider .button-arrow-left:hover {
+  transition: 0.5s;
   border: 2px solid #FDDCC4;
   background: #FDDCC4;
 }
-.our-friends-wrapper .our-friends .slider-wrapper .our-friends-slider div {
-  margin: 0%;
+.our-friends-wrapper .our-friends .slider-wrapper .our-friends-slider .pets-cards {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  width: 270px;
-  height: 435px;
+  gap: 30px;
+  margin-bottom: 30px;
 }
-.our-friends-wrapper .our-friends .slider-wrapper .our-friends-slider div p {
+.our-friends-wrapper .our-friends .slider-wrapper .our-friends-slider .pets-cards p {
   font-family: "Georgia";
   font-weight: 400;
   font-size: 20px;
@@ -266,13 +277,15 @@ body {
   letter-spacing: 0.07em;
   color: #545454;
 }
-.our-friends-wrapper .our-friends .slider-wrapper .our-friends-slider div:hover {
-  background: #FAFAFA;
+.our-friends-wrapper .our-friends .slider-wrapper .our-friends-slider .pets-cards:hover {
+  transition: 0.5s;
+  background: #FFFFFF;
 }
-.our-friends-wrapper .our-friends .slider-wrapper .our-friends-slider div:hover button {
+.our-friends-wrapper .our-friends .slider-wrapper .our-friends-slider .pets-cards:hover button {
+  transition: 0.5s;
   background: #FDDCC4;
 }
-.our-friends-wrapper .our-friends .slider-wrapper .our-friends-slider div button {
+.our-friends-wrapper .our-friends .slider-wrapper .our-friends-slider .pets-cards button {
   color: #292929;
   padding: 13px 0px;
   border: 2px solid #F1CDB3;
@@ -287,7 +300,8 @@ body {
   /* identical to box height, or 22px */
   letter-spacing: 0.06em;
 }
-.our-friends-wrapper .our-friends .slider-wrapper .our-friends-slider div button:hover {
+.our-friends-wrapper .our-friends .slider-wrapper .our-friends-slider .pets-cards button:hover {
+  transition: 0.5s;
   border: 2px solid #FDDCC4;
   background: #FDDCC4;
 }
@@ -309,6 +323,7 @@ body {
   box-shadow: 0 4px 4px 0 white, 0 3px 5px 0 gray;
 }
 .our-friends-wrapper .our-friends .slider-wrapper .our-friends-slider .button-arrow-right:hover {
+  transition: 0.5s;
   border: 2px solid #FDDCC4;
   background: #FDDCC4;
 }
@@ -318,7 +333,7 @@ body {
 .our-friends-wrapper .our-friends .slider-wrapper > button {
   margin: 60px;
 }
-.our-friends-wrapper .our-friends .slider-wrapper button {
+.our-friends-wrapper .our-friends a button {
   color: #292929;
   padding: 13px 0px;
   border: 2px solid #F1CDB3;
@@ -333,33 +348,28 @@ body {
   /* identical to box height, or 22px */
   letter-spacing: 0.06em;
 }
-.our-friends-wrapper .our-friends .slider-wrapper button:hover {
+.our-friends-wrapper .our-friends a button:hover {
+  transition: 0.5s;
   border: 2px solid #FDDCC4;
   background: #FDDCC4;
 }
 
-.helping-wrapper {
-  padding-bottom: 141px;
-}
 .helping-wrapper h3 {
   font-family: "Georgia";
-  font-weight: 400;
   text-align: center;
-  margin: 80px 0px 60px;
+  /* margin: 80px 0px 60px; */
   font-size: 35px;
   line-height: 130%;
-  color: #545454;
-  letter-spacing: 0.06em;
+  color: rgb(84, 84, 84);
 }
 .helping-wrapper .helping-window {
   box-sizing: border-box;
-  width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  max-width: 1280px;
+  margin: 80px auto 147px auto;
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
+  gap: 60px;
 }
 .helping-wrapper .helping-window .helping-methods {
   padding: 0px 87px;
@@ -376,37 +386,34 @@ body {
 }
 .helping-wrapper .helping-window .helping-methods .methods p {
   font-family: "Georgia";
-  margin: 25px 0 0 0;
+  margin: 21px 0 0 0;
   font-size: 20px;
   letter-spacing: 0.06em;
-  color: #545454;
+  color: rgb(84, 84, 84);
 }
 
 .donation {
   background: #F6F6F6;
-  min-width: fit-content;
-  padding-top: 35px;
-  padding-bottom: 91px;
+  margin: 0 auto;
 }
 
 .donation-conteiner {
-  margin: 0px auto;
-  width: 1280px;
+  margin: 30px auto 100px auto;
+  max-width: 1280px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.3%;
+  gap: 30px;
 }
 
 .credit-card {
   display: flex;
   flex-direction: column;
   width: 380px;
-  text-align: left;
+  gap: 19px;
 }
 .credit-card h3 {
   font-family: "Georgia";
-  margin: 0;
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
@@ -414,28 +421,24 @@ body {
   letter-spacing: 0.06em;
 }
 .credit-card h5 {
-  margin-top: 20px;
-  margin-bottom: 19px;
   font-weight: 100;
   font-family: "Georgia";
   font-size: 15px;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.06em;
   color: #545454;
 }
 .credit-card .href {
-  box-sizing: border-box;
   width: 349px;
-  margin-bottom: 9px;
   padding: 10px 15px 10px 0;
   border-radius: 9px;
   background: url(../../assets/icons/credit-card.svg) no-repeat;
-  background-color: #F1CDB3;
   background-position: 15px;
   text-align: right;
   font-family: "Georgia";
   font-size: 20px;
   letter-spacing: 0.06em;
   color: #545454;
+  background-color: #F1CDB3;
 }
 .credit-card .href:hover {
   background-color: #FDDCC4;

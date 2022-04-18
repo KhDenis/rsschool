@@ -1,0 +1,16 @@
+{
+  "name": "shelter",
+  "version": "1.0.0",
+  "description": "This is study project of simple landing site with 2 pages. Content is about shelter for pets",
+  "main": "index.js",
+  "scripts": {
+    "style-main": "sass -w sass/main.scss:pages/main/main.css",
+    "style-pets": "sass -w sass/main.scss:pages/pets/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Khorev Denis",
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

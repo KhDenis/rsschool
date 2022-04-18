@@ -1,0 +1,13 @@
+.our-friends-slider{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 40px;
+    align-content: center;
+}
+.button-bar {
+    display: flex;
+    gap: 20px;
+}

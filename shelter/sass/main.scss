@@ -1,0 +1,33 @@
+
+
+// Abstract
+@import "abstract/constants.scss";
+@import "abstract/mixins";
+
+//Base
+
+@import "base/base.scss";
+@import "base/typography";
+
+//Components 
+
+@import "components/buttons";
+@import "components/pet-card";
+@import "components/footer-icons";
+@import "components/card-number";
+
+
+
+//Layouts /main
+
+@import "layouts/main/header";
+@import "layouts/main/not-only";
+@import "layouts/main/about";
+@import "layouts/main/our-friends";
+@import "layouts/main/helping";
+@import "layouts/main/donation";
+@import "layouts/main/footer";
+
+//Layouts /pets
+@import "layouts/pets/header";
+@import "layouts/pets/our-friends";

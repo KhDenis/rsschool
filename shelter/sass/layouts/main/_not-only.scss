@@ -1,0 +1,33 @@
+.background-top{
+    min-width: fit-content;
+    min-height: fit-content;
+    background: url("../../assets/images/noise_lines_transparent@2X.png"), left -120px/100% 908px radial-gradient(ellipse 50% 50% at 0 0, rgb(91 72 58), rgb(38 36 37));
+    mask-repeat: no-repeat;
+}
+.not-only-columns{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    img{
+        width: 58.2%;
+    }
+}
+.not-only-arcticle{
+    align-self: center;
+    display: flex;
+    position: relative;
+    bottom: 40px;
+    justify-content: space-between;
+    flex-direction: column;
+    color: $color-dark-s;
+    height: 320px;
+    width: 460px;
+    button{
+        display: inline-flex;
+        align-self: flex-start;
+    }
+}
+.not-only-title{
+    width: 310px;
+    height: 114px;
+}

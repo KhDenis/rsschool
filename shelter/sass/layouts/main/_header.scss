@@ -1,0 +1,46 @@
+.header-conteiner{
+    background:url("../../assets/images/noise_lines_transparent@2X.png"), left top/100% 908px radial-gradient(ellipse 50% 50% at 0 0, rgb(91 72 58), rgb(38 36 37));;
+}
+.navigation{
+    display: flex;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header-conteiner{
+    padding-top: 60px;
+
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    p{
+        margin:10px 0 0 4px;
+    }
+}
+.navigation-list{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+    gap: 35px;
+    align-items: center;
+}
+
+
+
+.menu-item {
+    color: $color-dark-s;
+    &:hover{
+        color:$color-light-s
+    }
+    &:focus{
+        border-bottom: solid 3px $primary-color;
+        position: relative;
+        // top: 2px;
+    }
+}
+.item_colored{
+   position: relative;
+   padding-bottom: 6px;
+   border-bottom: solid 3px $primary-color;
+}

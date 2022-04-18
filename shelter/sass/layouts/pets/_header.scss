@@ -1,0 +1,18 @@
+
+.pets-header-conteiner {
+    height: 120px;
+    padding: 0;
+}
+.pets-navigation{
+    position: relative;
+    top: 33px;
+    margin-bottom: 8px;
+    margin-right: 2px;
+    gap: 35px;
+}
+.logo, .pets-logo-subscription, .pets-menu-item {
+    color:$color-dark-l;
+}
+.pets-menu-item:hover{
+    color: $color-dark-3xl;
+}

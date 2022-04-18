@@ -1,0 +1,42 @@
+button{
+    color: $color-dark-3xl;
+    padding: 13px 45px;
+    border: 2px solid $primary-color;
+    box-sizing: border-box;
+    border-radius: 100px;
+    background: $color-light-xl;
+    cursor: pointer;
+    &:hover{
+        transition: 0.5s;
+        border: 2px solid $primary-light;
+        background: $primary-light;
+    }
+
+}
+.button_colored{
+    background: $primary-color;
+    border-color: $primary-color;
+}
+.button-round{
+    @extend button;
+    padding: 0;
+    color: $color-dark-3xl;
+    border-radius: 100px;
+    height: 52px;
+    width: 52px;
+}
+.button_arrow{
+    font-size: 0;
+    img{
+        margin-top: 8px;
+    }
+}
+.left_uncolored{
+    color:$color-dark-s;
+    border-color: $color-dark-s;
+    pointer-events: none;
+}
+
+.center{
+    background-color: $primary-color;
+}

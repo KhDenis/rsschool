@@ -1,0 +1,25 @@
+.h3-helping{
+    text-align: center;
+}
+.helping-window{
+    margin: 80px auto 98px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.helping-methods{
+    padding: 0px 87px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 55px 119px;
+}
+.methods{
+    display: block;
+    height: 113px;
+    text-align: center;
+    p{
+        margin: 25px 0 0 0;
+        color: $color-dark-l;
+    }
+}

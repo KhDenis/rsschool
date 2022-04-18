@@ -1,0 +1,22 @@
+.card-number{
+    width: 349px;
+    padding: 10px 15px 10px 0;
+    border-radius: 9px;
+    background: url(../../assets/icons/credit-card.svg)  no-repeat;
+    background-position: 15px;
+    text-align: right;
+    font-family: 'Georgia';
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    color:$color-dark-l;
+    background-color: $primary-color;
+    &:hover{
+        background-color:$primary-light ;
+        border-color: $primary-light ;
+    }
+    a,a:hover,a:visited{
+        text-decoration: none;
+        color: $color-dark-l;
+    }
+
+}

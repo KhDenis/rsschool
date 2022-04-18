@@ -1,0 +1,72 @@
+.logo-subtitle{
+    @include font("Arial",$size:1.3rem,$line-height:1.5rem);
+}
+h1{
+    @include font("Georgia",$size:3.2rem,$line-height:110%);
+    letter-spacing: 0.06em;
+    color: $primary-color;
+}
+h2{
+    @include font("Georgia",$size:4.4rem,$line-height:130%);
+    color: $color-light-xl;
+}
+h3{
+    @include font("Georgia",$size:3.5rem,$line-height:130%);
+    letter-spacing: 0.06em;
+    color:$color-dark-l;
+}
+.Heading3{
+    text-align: center;
+}
+    
+.h3-mobile{
+    @include font("Georgia",$size:2.5rem,$line-height:130%);
+    letter-spacing: 0.06em;
+}
+h4{
+    @include font("Georgia",$size:2rem,$line-height:115%);
+    letter-spacing: 0.06em;
+}
+.method-subscription{
+    @extend h4;
+}
+h5{
+    @include font("Georgia",$size:1.5rem,$line-height:110%);
+    align-items: center;
+    letter-spacing: 0.06em;
+}
+button{
+    @include font("Georgia",$size:1.66rem,$line-height:130%);
+    color:$color-dark-3xl;
+    letter-spacing: 0.066em;     
+}
+.logo-subscription{
+    @include font("Arial",$size:1.3rem,$line-height:1.5rem);
+    letter-spacing: 0.1em;
+    color: $color-light-xl;
+
+}
+.paragraph-l{
+    @include font("Arial",$size:1.5rem,$line-height:160%);
+}
+.card-subscription{
+    @include font("Georgia",$size:2.3rem,$line-height:2.3rem);
+    color: $color-dark-l;
+}
+.paragraph-mobile-menu{
+    @include font("Arial",$size:3.2rem,$line-height:160%);
+}
+.font-legacy{
+    @include font("Arial",$size:1.2rem,$line-height:1.8rem,$style:"italic");
+    color: $color-dark-l;
+}
+.font-footer-href{
+    @include font("Georgia",$size:2rem,$style:"italic");
+        letter-spacing: 0.06em;
+        color: $primary-color;
+}
+.font-footer-h3{
+    margin-top: 16px;
+    letter-spacing: 0.056em;
+    color:$color-light-xl;
+}

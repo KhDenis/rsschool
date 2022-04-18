@@ -1,0 +1,32 @@
+footer{
+    background:url($background-images), radial-gradient(100% 215% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
+}
+.flex-conteiner{
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    div{
+        display: flex;
+        justify-self: flex-start;
+        flex-direction: column;
+        gap:40px;
+
+    }
+    .footer-block-1{
+        width: 278px;
+    }
+    .footer-block-2{
+        a{
+            padding-left: 40px;
+        }
+        width: 302px;
+    }
+    
+    a{
+        display: flex;
+        padding-left: 60px;
+        flex-direction: column;
+        justify-content: center;
+        height: 32px;
+    }
+}

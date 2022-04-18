@@ -1,0 +1,32 @@
+.our-friends-conteiner{
+    background: $color-light-l;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap:80;
+}
+.our-friends-wrapper{
+    width:100%;
+}
+.slider-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+.our-friends-slider{
+    display: flex;
+    gap: 90px;
+    align-content: center;
+}
+
+.slider-conteiner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+

@@ -111,6 +111,7 @@ $color-dark-m:#B2B2B2;
 .background-top {
 
     min-width: fit-content;
+    min-height: fit-content;
     background:url($background-images), radial-gradient(100% 215% at 0% 0%, #5B483A 0%, #262425 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
     background-position: center;
     // background-size: cover;

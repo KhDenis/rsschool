@@ -10,4 +10,25 @@
 .button-bar {
     display: flex;
     gap: 20px;
+    @include manual-view(1280px){
+        position: relative;
+        top:10px;
+    }
+    @include manual-view(500px){
+        gap:10px;
+        position: relative;
+        top: -4px;
+    }
+}
+.pets-slider-wrapper{
+    gap:60px;
+    @include manual-view(1000px){
+        gap:31px;
+        margin-bottom: 84px;
+    }
+    @include manual-view(500px){
+        gap:44px;
+        margin-bottom: 38px;
+
+    }
 }

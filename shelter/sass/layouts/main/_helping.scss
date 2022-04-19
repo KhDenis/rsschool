@@ -6,6 +6,10 @@
     display: flex;
     flex-direction: column;
     gap: 60px;
+    @include manual-view(500px){
+        margin: 42px auto 43px auto;
+        gap: 40px 1px;
+    }
 }
 .helping-methods{
     padding: 0px 87px;
@@ -13,13 +17,45 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 55px 119px;
+    @include desktop-view{
+        padding: 0px 40px;
+        gap: 55px 60px;
+    }
+    @include manual-view(500px){
+        padding: 0 1%;
+        gap: 30px 1px;
+        justify-content: space-between;
+    }
 }
 .methods{
-    display: block;
     height: 113px;
     text-align: center;
     p{
         margin: 25px 0 0 0;
         color: $color-dark-l;
+    }
+    @include desktop-view{
+        width: 20%;
+        flex-grow: 1;
+        white-space: nowrap;
+    }
+    @include manual-view(700px){
+        img{
+            height: 50px;
+            width: 50px;
+        }
+        p{
+            font-size: 15px;
+            line-height: 110%;
+            letter-spacing: 0.06em;
+        }
+    }
+    @include manual-view(500px){
+        height: 87px;
+        width: 130px;
+        flex-grow: unset;
+        p{
+            margin: 18px 0 0 0;
+        }
     }
 }

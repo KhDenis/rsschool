@@ -9,11 +9,21 @@ h1{
 h2{
     @include font("Georgia",$size:4.4rem,$line-height:130%);
     color: $color-light-xl;
+    @include manual-view(500px){
+        @include font("Georgia",$size:2.5rem,$line-height:130%);
+        letter-spacing: 0.06em; 
+    }
 }
 h3{
     @include font("Georgia",$size:3.5rem,$line-height:130%);
     letter-spacing: 0.06em;
     color:$color-dark-l;
+    @include manual-view(500px){
+        @include font("Georgia",$size:2.5rem,$line-height:130%);
+        letter-spacing: 0.06em; 
+        text-align: center;
+    }
+
 }
 .Heading3{
     text-align: center;
@@ -26,9 +36,15 @@ h3{
 h4{
     @include font("Georgia",$size:2rem,$line-height:115%);
     letter-spacing: 0.06em;
+    @include manual-view(500px){
+        font-size: 15px;
+        line-height: 110%;
+        letter-spacing: 0.06em;
+    }
 }
 .method-subscription{
     @extend h4;
+    
 }
 h5{
     @include font("Georgia",$size:1.5rem,$line-height:110%);
@@ -44,10 +60,12 @@ button{
     @include font("Arial",$size:1.3rem,$line-height:1.5rem);
     letter-spacing: 0.1em;
     color: $color-light-xl;
-
+    
 }
 .paragraph-l{
     @include font("Arial",$size:1.5rem,$line-height:160%);
+    color: $color-dark-xl;
+    letter-spacing: 0.001em;
 }
 .card-subscription{
     @include font("Georgia",$size:2.3rem,$line-height:2.3rem);
@@ -59,11 +77,17 @@ button{
 .font-legacy{
     @include font("Arial",$size:1.2rem,$line-height:1.8rem,$style:"italic");
     color: $color-dark-l;
+    @include manual-view(500px){
+        text-align: justify;
+        padding: 0 9px;
+    }
+
 }
 .font-footer-href{
     @include font("Georgia",$size:2rem,$style:"italic");
         letter-spacing: 0.06em;
         color: $primary-color;
+        line-height: 120%;
 }
 .font-footer-h3{
     margin-top: 16px;

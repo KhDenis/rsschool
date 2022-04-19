@@ -11,10 +11,13 @@
     <header class="header-conteiner">
         <div class="wrapper">
             <nav class="navigation">
-                <div class="logo">
-                    <a href="index.html"><h1>Cozy House</h1></a>
-                    <p class = "logo-subscription">Shelter for pets in Boston</p>
-                </div>
+                    <div class="logo">
+                        <a href="index.html"><h1>Cozy House</h1></a>
+                        <p class = "logo-subscription">Shelter for pets in Boston</p>
+                    </div>
+                    <div class="burger-container">
+                        <object class = "burger" data="/assets/icons/Burger.svg" type="image/svg+xml"> here is burger</object>
+                    </div>
                 <ul class="paragraph-l navigation-list">
                     <li>
                         <a class="menu-item item_colored" href="#about">About the shelter</a>
@@ -36,7 +39,7 @@
         <div class="wrapper header-wrapper">
             <section class="not-only-columns">
                     <article class="not-only-arcticle">
-                        <h2 class="not-only-title">Not only people need a house</h2>
+                        <h2 class="not-only-title">Not only people<br> need a house</h2>
                         <p class="paragraph-l paragraph-l_not-only">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
                         <a href="#our-friends">
                             <button class="button_colored">Make a friend</button>
@@ -48,8 +51,10 @@
     </div>
     <div id="about" class="about">
         <section class="wrapper about-wrapper">
-            <img src="../../assets/images/about-pets.png" alt="pretty dog and cat">
-            <div>
+            
+                <img  class= "about-image" src="../../assets/images/about-pets.png" alt="pretty dog and cat">
+            
+            <div class = "about-article">
                 <h3>About the shelter <br>“Cozy House”</h3>
                 <p class = "paragraph-l paragraph-l_about ">Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.</p>
                 <p class = "paragraph-l paragraph-l_about">We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.</p>
@@ -63,25 +68,28 @@
                 <h3 class="Heading3">Our friends who<br>
                 are looking for a house</h3>
                 <div class="slider-conteiner">
-                    <button class="button-round button_arrow"><img src="../../assets/icons/Arrow-left.svg" alt="←"></button>
+                    <button class="button-round button_arrow button-flex-slider-left"><img src="../../assets/icons/Arrow-left.svg" alt="←"></button>
                     <div class="our-friends-slider">
-                        <div class="pets-cards">
+                        <div class="pets-cards main-pets">
                             <img src="../../assets/images/pets-katrine.png" alt="katerine">
                             <p class="card-subscription">Katrine</p>
                             <button>Learn more</button>
                         </div>
-                        <div class="pets-cards">
+                        <div class="pets-cards main-pets">
                             <img src="../../assets/images/pets-jennifer.png" alt="jenifer">
                             <p class="card-subscription">Jennifer</p>
                             <button>Learn more</button>
                         </div>
-                        <div class="pets-cards">
+                        <div class="pets-cards main-pets">
                             <img src="../../assets/images/pets-woody.png" alt="">
                             <p class="card-subscription">Woody</p>
                             <button>Learn more</button>
                         </div>
                     </div>
-                    <button class="button-round button_arrow"><img src="../../assets/icons/Arrow-right.svg" alt="←"></button>
+                    <div class="button-arrow-nav">
+                        <button class="button-round button_arrow button-flex-slider-left_hidden"><img src="../../assets/icons/Arrow-left.svg" alt="←"></button>
+                        <button class="button-round button_arrow"><img src="../../assets/icons/Arrow-right.svg" alt="←"></button>
+                    </div>
                 </div>
                 <a href="../../pages/pets/pets.html">
                     <button class = "button_colored">Get to know the rest</button>
@@ -137,17 +145,21 @@
     <div class="donation-conteiner">
         <div class="wrapper donation-wrapper">
             <div class="donation-flex">
+                <div class="donation-puppy">
                     <img src="../../assets/images/donation-dog.png" alt="Donation puppy">
-                <div class="credit-card">
-                    <h3>You can also<br>make a donation</h3>
-                    <h5>Name of the bank / Type of bank account</h5>
-                    <div class="href card-number">
-                        <a href="#" class="credit-number">8380 2880 8028 8791 7435</a> 
-    
+                </div>
+                <div class="credit-container">
+                    <div class="credit-card">
+                        <h3>You can also<br>make a donation</h3>
+                        <h5>Name of the bank / Type of bank account</h5>
+                        <div class="href card-number">
+                            <a href="#" class="credit-number">8380 2880 8028 8791 7435</a> 
+        
+                        </div>
+                        <p class="font-legacy">
+                            Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                        </p>
                     </div>
-                    <p class="font-legacy">
-                        Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                    </p>
                 </div>
             </div>
         </div>
@@ -155,17 +167,19 @@
     <footer id="contacts">
         <div class="wrapper footer-conteiner">
             <div class="flex-conteiner">
-                <div class="footer-block-1">
-                    <h3 class="font-footer-h3">For questions and suggestions</h3>
-                    <a class = "font-footer-href" href="mailto:email@shelter.com" id="mail" >email@shelter.com</a>
-                    <a class = "font-footer-href" href="tel:+13 674 567 75 54" id="tel">+13 674 567 75 54</a>
-                </div>
-                <div class="footer-block-2">
-                    <h3 class = "font-footer-h3">We are waiting for your visit</h3>
-                    <a class = "font-footer-href" href="https://goo.gl/maps/uAZG3p7cAmE9XdmN7" id="geo-base-1" target="blank">1 Central Street, Boston (entrance from the store)</a>
-                    <a class = "font-footer-href" href="https://goo.gl/maps/cSv5qXNXTTr1rHqt9" id="geo-base-2" target="blank">18 South Park, London</a>
-                </div>
-                <div class="footer-blocs">
+                <!-- <div class="footer-arcticle-blocks"> -->
+                    <div class="footer-block-1">
+                        <h3 class="font-footer-h3">For questions and suggestions</h3>
+                        <a class = "font-footer-href" href="mailto:email@shelter.com" id="mail" >email@shelter.com</a>
+                        <a class = "font-footer-href" href="tel:+13 674 567 75 54" id="tel">+13 674 567 75 54</a>
+                    </div>
+                    <div class="footer-block-2">
+                        <h3 class = "font-footer-h3">We are waiting for your visit</h3>
+                        <a class = "font-footer-href" href="https://goo.gl/maps/uAZG3p7cAmE9XdmN7" id="geo-base-1" target="blank">1 Central Street, Boston (entrance from the store)</a>
+                        <a class = "font-footer-href" href="https://goo.gl/maps/cSv5qXNXTTr1rHqt9" id="geo-base-2" target="blank">18 South Park, London</a>
+                    </div>
+                <!-- </div> -->
+                <div class="footer-puppy">
                     <img src="../../assets/images/footer-puppy.png" alt="nice licking doggy">
                 </div>
             </div>

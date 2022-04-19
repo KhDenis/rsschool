@@ -1,6 +1,7 @@
 .card-number{
     width: 349px;
-    padding: 10px 15px 10px 0;
+    max-width: 100%;
+    padding: 10px 15px 10px 20px;
     border-radius: 9px;
     background: url(../../assets/icons/credit-card.svg)  no-repeat;
     background-position: 15px;
@@ -18,5 +19,13 @@
         text-decoration: none;
         color: $color-dark-l;
     }
-
+    @include manual-view(500px){
+        font-size: 15px;
+        line-height: 110%;
+        text-align: left;
+        padding: 12px 9px 12px 59px;
+        background-position: 14px;
+        align-self: center;
+        width: 280px;
+    }
 }

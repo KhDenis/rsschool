@@ -5,3 +5,21 @@
     font-weight: $weight;
     line-height: $line-height;
 }
+@mixin tablet-view{
+    @media screen and (max-width: $tablet-width){@content; }
+}
+@mixin padding-view{
+    @media screen and (max-width: $small-padding-width){@content; }
+}
+@mixin desktop-view{
+    @media screen and (max-width: $content-width){@content; }
+}
+@mixin mobile-view{
+    @media screen and (max-width: $mobile-width){@content; }
+}
+@mixin mobile-375-view{
+    @media screen and (max-width: $mobile-menu-375-width){@content; }
+}
+@mixin manual-view($manual-width:$tablet-width){
+    @media screen and (max-width: $manual-width){@content; }   
+}

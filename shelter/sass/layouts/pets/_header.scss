@@ -5,10 +5,13 @@
 }
 .pets-navigation{
     position: relative;
-    top: 33px;
+    top: 31px;
     margin-bottom: 8px;
     margin-right: 2px;
     gap: 35px;
+    @include manual-view(500px){
+        gap: 0px;
+    }
 }
 .logo, .pets-logo-subscription, .pets-menu-item {
     color:$color-dark-l;

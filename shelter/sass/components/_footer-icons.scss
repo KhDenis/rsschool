@@ -5,6 +5,10 @@
 }
 #tel{
     background: url(../../assets/icons/icon-phone.svg) no-repeat;
+    @include manual-view(500px){
+
+        // background-position: 3px;
+    }
 }
 #geo-base-1{
     background: url(../../assets/icons/icon-marker.svg) no-repeat;

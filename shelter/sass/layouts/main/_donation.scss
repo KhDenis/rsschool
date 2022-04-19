@@ -9,12 +9,49 @@
     padding-top: 80px;
     gap: 30px;
     padding-bottom: 100px;
+    @include padding-view{
+        flex-direction: column-reverse;
+        
+        padding-bottom: 95px;
+        gap:61px;
+    }
+    @include manual-view(500px){
+        padding-top: 41px;
+        gap: 39px;
+        padding-bottom: 40px;
+        
+    }
 }
 
+.credit-container{
+    @include manual-view(500px){
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    padding: 1px;
+}
 .credit-card{
     display: flex;
     flex-direction: column;
-    width: 380px;
+    max-width: 380px;
     gap: 20px;
+    @include manual-view(500px){
+        gap:23.5px;
+        h5{
+            text-align: center;
+            letter-spacing: 0.01em;
+        }
+    }
 }
 
+.donation-puppy{
+    @include manual-view(1000px){
+    padding: 0px 20px;
+    }
+    @include manual-view(500px){
+        img{
+            width: 100%;
+        }
+
+    }
+}

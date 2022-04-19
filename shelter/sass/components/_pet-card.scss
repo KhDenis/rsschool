@@ -13,4 +13,34 @@
             background: $primary-light;
         }
     }
+
 }
+
+.main-pets{
+    @include desktop-view{
+        &:nth-child(3){
+            display: none;
+        }
+    }
+    @include tablet-view{
+        &:nth-child(2){
+            display: none;
+        }
+    }
+    
+}
+
+.pets-page{
+    @include desktop-view{
+        &:nth-last-child(1),&:nth-last-child(2){
+            display: none;
+    }
+}
+    @include manual-view(600px){
+        &:nth-last-child(3),&:nth-last-child(4),&:nth-last-child(5){
+            display: none;
+        }
+    }
+}
+    
+

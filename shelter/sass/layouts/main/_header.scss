@@ -9,7 +9,18 @@
 }
 .header-conteiner{
     padding-top: 60px;
-
+    @include padding-view{
+        padding-top: 30px;
+    }
+    
+}
+.burger-container{
+    align-self: center;
+    flex-grow: 0.5;
+    display: none;
+    @include tablet-view{
+        display: block;
+    }
 }
 .logo{
     display: flex;
@@ -21,9 +32,14 @@
 .navigation-list{
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+    position: relative;
+    right: 2px;
     gap: 35px;
     align-items: center;
+    @include tablet-view{
+        display: none;
+    }
 }
 
 
@@ -41,6 +57,6 @@
 }
 .item_colored{
    position: relative;
-   padding-bottom: 6px;
+   padding-bottom: 5px;
    border-bottom: solid 3px $primary-color;
 }

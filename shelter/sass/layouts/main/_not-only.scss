@@ -1,7 +1,5 @@
 .background-top{
-    min-width: fit-content;
-    min-height: fit-content;
-    background: url("../../assets/images/noise_lines_transparent@2X.png"), left -120px/100% 908px radial-gradient(ellipse 50% 50% at 0 0, rgb(91 72 58), rgb(38 36 37));
+    background: url("../../assets/images/noise_lines_transparent@2X.png"), left -120px/100% calc(100% + 120px) radial-gradient(ellipse 50% 50% at 0 0, rgb(91 72 58), rgb(38 36 37));
     mask-repeat: no-repeat;
 }
 .not-only-columns{
@@ -11,6 +9,19 @@
     img{
         width: 58.2%;
     }
+    @include padding-view{
+        gap: 60px;
+        flex-direction: column;
+        padding-top: 102px;
+        img{
+            width: 80.3%;
+            align-self: flex-end;
+            @include tablet-view{
+                width: 88%;
+            }
+        }
+
+    }
 }
 .not-only-arcticle{
     align-self: center;
@@ -19,12 +30,36 @@
     bottom: 40px;
     justify-content: space-between;
     flex-direction: column;
-    color: $color-dark-s;
     height: 320px;
-    width: 460px;
+    max-width: 465px;
+    p{
+
+        color: $color-dark-s;
+    }
     button{
         display: inline-flex;
         align-self: flex-start;
+    }
+    @include padding-view{
+        p{
+            text-align: left;
+        }
+        a{ align-self: center;}
+
+    }
+    @include manual-view(500px){
+       height: 296px;
+        // width: 300px;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+        h2{
+            height: auto;
+            width: auto;
+        }
+        p{
+            text-align: center;
+        }
     }
 }
 .not-only-title{

@@ -17,18 +17,18 @@
         left: 2px;  
         gap:24px;
         max-width: 430px;
-        @include padding-view{
+        @include desktop-view{
             margin: 0 15px;
         }
         overflow: hidden;
     }
-    @include padding-view{
+    @include desktop-view{
         flex-direction: column-reverse;
         align-items: center;
         margin-top: 67px;
         gap:80px;
     }
-    @include manual-view(500px){
+    @include tablet-view{
         gap:39px;
         margin-top: 29px;
         margin-bottom: 44px;

@@ -9,13 +9,13 @@
     padding-top: 80px;
     gap: 30px;
     padding-bottom: 100px;
-    @include padding-view{
+    @include desktop-view{
         flex-direction: column-reverse;
         
         padding-bottom: 95px;
         gap:61px;
     }
-    @include manual-view(500px){
+    @include tablet-view{
         padding-top: 41px;
         gap: 39px;
         padding-bottom: 40px;
@@ -24,7 +24,7 @@
 }
 
 .credit-container{
-    @include manual-view(500px){
+    @include tablet-view{
         margin: 0 auto;
         max-width: 100%;
     }
@@ -35,7 +35,7 @@
     flex-direction: column;
     max-width: 380px;
     gap: 20px;
-    @include manual-view(500px){
+    @include tablet-view{
         gap:23.5px;
         h5{
             text-align: center;
@@ -45,10 +45,10 @@
 }
 
 .donation-puppy{
-    @include manual-view(1000px){
+    @include desktop-view{
     padding: 0px 20px;
     }
-    @include manual-view(500px){
+    @include tablet-view{
         img{
             width: 100%;
         }

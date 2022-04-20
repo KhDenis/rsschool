@@ -42,13 +42,13 @@ button{
 }
 .button-flex-slider-left{
     display: block;
-    @include manual-view(500px){
+    @include tablet-view{
         display: none;
     }
 }
 .button-flex-slider-left_hidden{
     display: none;
-    @include manual-view(500px){
+    @include tablet-view{
         display: block;
     }
 }

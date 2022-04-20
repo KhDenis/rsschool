@@ -9,7 +9,7 @@
     img{
         width: 58.2%;
     }
-    @include padding-view{
+    @include desktop-view{
         gap: 60px;
         flex-direction: column;
         padding-top: 102px;
@@ -40,14 +40,14 @@
         display: inline-flex;
         align-self: flex-start;
     }
-    @include padding-view{
+    @include desktop-view{
         p{
             text-align: left;
         }
         a{ align-self: center;}
 
     }
-    @include manual-view(500px){
+    @include tablet-view{
        height: 296px;
         // width: 300px;
         justify-content: space-between;

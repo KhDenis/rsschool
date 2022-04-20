@@ -17,13 +17,13 @@ footer{
         justify-content: center;
         height: 32px;
     }
-    @include padding-view{
+    @include desktop-view{
         flex-wrap: wrap;
         justify-content: center;
         gap: 65px;
         padding-top: 14px;
     }
-    @include manual-view(500px){
+    @include tablet-view{
         gap: 22px;
     }
 }
@@ -31,7 +31,7 @@ footer{
 .footer-block-1{
     gap:40px;
     width: 278px;
-    @include manual-view(500px){
+    @include tablet-view{
         align-items: center;
     }
 }
@@ -41,7 +41,7 @@ footer{
         padding-left: 40px;
     }
     width: 302px;
-    @include manual-view(500px){
+    @include tablet-view{
         gap: 47px;
         h3{
             padding: 0 10px;
@@ -50,7 +50,7 @@ footer{
 }
     
 .footer-puppy{
-    @include manual-view(500px){
+    @include tablet-view{
         margin-top: 18px;
         width: 260px;
     

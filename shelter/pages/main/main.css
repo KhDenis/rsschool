@@ -14,7 +14,7 @@ html {
   margin: 0px auto;
   padding: 0 40px 0 40px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1279px) {
   .wrapper {
     padding: 0 30px 0 30px;
   }
@@ -59,7 +59,7 @@ h2 {
   line-height: 130%;
   color: #FFFFFF;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   h2 {
     font-family: "Georgia";
     font-size: 2.5rem;
@@ -79,7 +79,7 @@ h3 {
   letter-spacing: 0.06em;
   color: #545454;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   h3 {
     font-family: "Georgia";
     font-size: 2.5rem;
@@ -112,7 +112,7 @@ h4, .method-subscription {
   line-height: 115%;
   letter-spacing: 0.06em;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   h4, .method-subscription {
     font-size: 15px;
     line-height: 110%;
@@ -185,7 +185,7 @@ button, .button-round {
   line-height: 1.8rem;
   color: #545454;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .font-legacy {
     text-align: justify;
     padding: 0 9px;
@@ -257,7 +257,7 @@ button:hover, .button-round:hover {
 .button-flex-slider-left {
   display: block;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .button-flex-slider-left {
     display: none;
   }
@@ -266,7 +266,7 @@ button:hover, .button-round:hover {
 .button-flex-slider-left_hidden {
   display: none;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .button-flex-slider-left_hidden {
     display: block;
   }
@@ -305,7 +305,7 @@ button:hover, .button-round:hover {
     display: none;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .pets-page:nth-last-child(3), .pets-page:nth-last-child(4), .pets-page:nth-last-child(5) {
     display: none;
   }
@@ -318,6 +318,7 @@ button:hover, .button-round:hover {
 #tel {
   background: url(../../assets/icons/icon-phone.svg) no-repeat;
 }
+
 #geo-base-1 {
   background: url(../../assets/icons/icon-marker.svg) no-repeat;
 }
@@ -348,7 +349,7 @@ button:hover, .button-round:hover {
   text-decoration: none;
   color: #545454;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .card-number {
     font-size: 15px;
     line-height: 110%;
@@ -444,7 +445,7 @@ button:hover, .button-round:hover {
 .not-only-columns img {
   width: 58.2%;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1279px) {
   .not-only-columns {
     gap: 60px;
     flex-direction: column;
@@ -455,7 +456,7 @@ button:hover, .button-round:hover {
     align-self: flex-end;
   }
 }
-@media screen and (max-width: 1000px) and (max-width: 767px) {
+@media screen and (max-width: 1279px) and (max-width: 767px) {
   .not-only-columns img {
     width: 88%;
   }
@@ -478,7 +479,7 @@ button:hover, .button-round:hover {
   display: inline-flex;
   align-self: flex-start;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1279px) {
   .not-only-arcticle p {
     text-align: left;
   }
@@ -486,7 +487,7 @@ button:hover, .button-round:hover {
     align-self: center;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .not-only-arcticle {
     height: 296px;
     justify-content: space-between;
@@ -528,12 +529,12 @@ button:hover, .button-round:hover {
   max-width: 430px;
   overflow: hidden;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1279px) {
   .about-wrapper .about-article {
     margin: 0 15px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1279px) {
   .about-wrapper {
     flex-direction: column-reverse;
     align-items: center;
@@ -541,7 +542,7 @@ button:hover, .button-round:hover {
     gap: 80px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .about-wrapper {
     gap: 39px;
     margin-top: 29px;
@@ -586,7 +587,7 @@ button:hover, .button-round:hover {
   margin-top: 80px;
   margin-bottom: 100px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .slider-wrapper {
     flex-direction: column;
     margin-top: 42px;
@@ -612,14 +613,14 @@ button:hover, .button-round:hover {
   align-items: center;
   justify-content: space-between;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .slider-conteiner {
     flex-direction: column;
     gap: 18px;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .button-arrow-nav {
     display: flex;
     gap: 80px;
@@ -636,7 +637,7 @@ button:hover, .button-round:hover {
   flex-direction: column;
   gap: 60px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .helping-window {
     margin: 42px auto 43px auto;
     gap: 40px 1px;
@@ -656,7 +657,7 @@ button:hover, .button-round:hover {
     gap: 55px 60px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .helping-methods {
     padding: 0 1%;
     gap: 30px 1px;
@@ -713,14 +714,14 @@ button:hover, .button-round:hover {
   gap: 30px;
   padding-bottom: 100px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1279px) {
   .donation-flex {
     flex-direction: column-reverse;
     padding-bottom: 95px;
     gap: 61px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .donation-flex {
     padding-top: 41px;
     gap: 39px;
@@ -731,7 +732,7 @@ button:hover, .button-round:hover {
 .credit-container {
   padding: 1px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .credit-container {
     margin: 0 auto;
     max-width: 100%;
@@ -744,7 +745,7 @@ button:hover, .button-round:hover {
   max-width: 380px;
   gap: 20px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .credit-card {
     gap: 23.5px;
   }
@@ -754,12 +755,12 @@ button:hover, .button-round:hover {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1279px) {
   .donation-puppy {
     padding: 0px 20px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .donation-puppy img {
     width: 100%;
   }
@@ -786,7 +787,7 @@ footer {
   justify-content: center;
   height: 32px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1279px) {
   .flex-conteiner {
     flex-wrap: wrap;
     justify-content: center;
@@ -794,7 +795,7 @@ footer {
     padding-top: 14px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .flex-conteiner {
     gap: 22px;
   }
@@ -804,7 +805,7 @@ footer {
   gap: 40px;
   width: 278px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .footer-block-1 {
     align-items: center;
   }
@@ -817,7 +818,7 @@ footer {
 .footer-block-2 a {
   padding-left: 40px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .footer-block-2 {
     gap: 47px;
   }
@@ -826,7 +827,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .footer-puppy {
     margin-top: 18px;
     width: 260px;
@@ -845,7 +846,7 @@ footer {
   margin-right: 2px;
   gap: 35px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .pets-navigation {
     gap: 0px;
   }
@@ -857,6 +858,18 @@ footer {
 
 .pets-menu-item:hover {
   color: #292929;
+}
+
+.pets-header-conteiner {
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+}
+
+main {
+  position: relative;
+  top: 120px;
 }
 
 .pets-our-friends-slider {
@@ -873,13 +886,13 @@ footer {
   display: flex;
   gap: 20px;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
   .button-bar {
     position: relative;
     top: 10px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .button-bar {
     gap: 10px;
     position: relative;
@@ -890,16 +903,27 @@ footer {
 .pets-slider-wrapper {
   gap: 60px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1279px) {
   .pets-slider-wrapper {
     gap: 31px;
     margin-bottom: 84px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
   .pets-slider-wrapper {
     gap: 44px;
     margin-bottom: 38px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slider-conteiner {
+    padding: 0 11%;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .slider-conteiner {
+    padding: 0 10px;
   }
 }
 

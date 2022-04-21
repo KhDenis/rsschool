@@ -771,13 +771,13 @@ footer {
 }
 
 .flex-conteiner {
-  padding-top: 40px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
   justify-content: space-between;
 }
 .flex-conteiner div {
   display: flex;
-  justify-self: flex-start;
   flex-direction: column;
 }
 .flex-conteiner a {
@@ -789,37 +789,56 @@ footer {
 }
 @media screen and (max-width: 1279px) {
   .flex-conteiner {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 65px;
-    padding-top: 14px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    padding-top: 25px;
   }
 }
 @media screen and (max-width: 767px) {
   .flex-conteiner {
-    gap: 22px;
+    margin-top: 0;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    justify-content: center;
   }
 }
 
 .footer-block-1 {
+  position: relative;
+  bottom: 10px;
   gap: 40px;
   width: 278px;
 }
 @media screen and (max-width: 767px) {
   .footer-block-1 {
+    margin-right: 0px;
+    margin-top: -40px;
+    grid-row: 1/2;
     align-items: center;
   }
 }
 
 .footer-block-2 {
+  position: relative;
+  bottom: 10px;
   gap: 40px;
   width: 302px;
 }
 .footer-block-2 a {
   padding-left: 40px;
 }
+@media screen and (max-width: 1279px) {
+  .footer-block-2 {
+    margin-right: 10px;
+  }
+}
 @media screen and (max-width: 767px) {
   .footer-block-2 {
+    margin-top: -54px;
+    margin-right: 0px;
+    grid-row: 2/3;
     gap: 47px;
   }
   .footer-block-2 h3 {
@@ -827,9 +846,20 @@ footer {
   }
 }
 
+.footer-puppy {
+  margin-top: 38px;
+}
+@media screen and (max-width: 1279px) {
+  .footer-puppy {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin-top: 54px;
+  }
+}
 @media screen and (max-width: 767px) {
   .footer-puppy {
-    margin-top: 18px;
+    grid-row: 3/4;
+    margin-top: -7px;
     width: 260px;
   }
 }

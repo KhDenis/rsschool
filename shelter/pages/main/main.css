@@ -917,17 +917,17 @@ main {
 }
 
 @media screen and (max-width: 1279px) {
-  .slider-conteiner {
+  .pets-slider-container {
     padding: 0 14%;
   }
 }
 @media screen and (max-width: 1000px) {
-  .slider-conteiner {
+  .pets-slider-container {
     padding: 0 6%;
   }
 }
 @media screen and (max-width: 767px) {
-  .slider-conteiner {
+  .pets-slider-container {
     padding: 0 12%;
   }
 }

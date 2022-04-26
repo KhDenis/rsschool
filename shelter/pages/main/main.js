@@ -3,12 +3,10 @@ const burger = document.querySelector(".burger-container")
 
     
 function clickFunction(e) {
-   
-        alert(e)
-    }
-    // handleEvent(e) {
-    //     alert(e.type + " на " + e.target);
-    //   }
-    // }
+        popupLayout.classList.toggle("toggle-menu")
 
-    burger.addEventListener("click", clickFunction)
+    }
+burger.addEventListener("click", clickFunction)
+document.addEventListener("click", (e)=>{
+    alert((e.target.classList))
+})

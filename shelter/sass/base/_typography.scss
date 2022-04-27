@@ -73,6 +73,7 @@ button{
 }
 .paragraph-mobile-menu{
     @include font("Arial",$size:3.2rem,$line-height:160%);
+    text-align: center;
 }
 .font-legacy{
     @include font("Arial",$size:1.2rem,$line-height:1.8rem,$style:"italic");
